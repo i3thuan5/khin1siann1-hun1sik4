@@ -1,2 +1,5 @@
 /.project
+/.pydevproject
 /venv
+*__init__.py
+/輕聲詞資料/.~lock.*#
