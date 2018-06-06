@@ -1,6 +1,5 @@
 from unittest.case import TestCase
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
-from 臺灣言語工具.基本物件.詞 import 詞
 from 臺灣言語工具.基本物件.字 import 字
 from 輕聲分析.分析 import 輕聲分析器
 
@@ -9,6 +8,13 @@ class 拆開詞內輕聲單元試驗(TestCase):
 
     def test無輕聲詞(self):
         參數 = 拆文分析器.對齊詞物件('照顧', 'tsiàu-kòo')
+        分析器物件 = 輕聲分析器()
+        self.assertEqual(
+            len(分析器物件.拆開詞內輕聲(參數)), 1
+        )
+    
+    def test干焦輕聲詞(self):
+        參數 = 拆文分析器.對齊詞物件('喔', '--ooh')
         分析器物件 = 輕聲分析器()
         self.assertEqual(
             len(分析器物件.拆開詞內輕聲(參數)), 1

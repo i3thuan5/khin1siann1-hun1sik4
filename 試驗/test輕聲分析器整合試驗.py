@@ -13,20 +13,26 @@ class 輕聲分析器整合試驗(TestCase):
             分析器物件.輕聲分析(參數), 按算結果
         )
 
-    def test一个kap頭前(self):
+    def test頭前kap(self):
         # A --B --C =>
         # A--B, --C
         self.漢字 = '林家啦'
         self.原臺羅 = 'Lîm --ka --lah'
         self.按算臺羅 = 'Lîm--ka --lah'
 
-    def test斷開一个(self):
+    def test後壁斷開(self):
         # A --B--C =>
         # A, --B, --C
         self.漢字 = '林先生啦'
         self.原臺羅 = 'Lîm --sian-sinn--lah'
         self.按算臺羅 = 'Lîm --sian-sinn --lah'
-        
+
+    def test頭前kap後壁拆開(self):
+        # A --B--C =>
+        # A--B, --C
+        self.漢字 = '林家啦'
+        self.原臺羅 = 'Lîm --ka--lah'
+        self.按算臺羅 = 'Lîm--ka --lah'
 
     def test斷開兩个(self):
         # A--B-C--D E =>
