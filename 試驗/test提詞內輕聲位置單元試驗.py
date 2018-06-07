@@ -12,10 +12,10 @@ class 提詞內輕聲位置單元試驗(TestCase):
             self.按算結果
         )
 
-    def test有一个輕聲詞(self):
-        self.漢字 = '林仔'
-        self.臺羅 = 'Lîm--á'
-        self.按算結果 = [1, ]
+    def test有兩个輕聲詞(self):
+        self.漢字 = '林先生啦'
+        self.臺羅 = 'Lîm--sian-sinn--lah'
+        self.按算結果 = [1, 3]
 
     def test干焦兩个輕聲詞(self):
         self.漢字 = '先生啦'
