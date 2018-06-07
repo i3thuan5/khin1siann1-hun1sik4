@@ -29,13 +29,12 @@ class 決定詞內的分連寫單元試驗(TestCase):
         self.臺羅 = 'Lîm--lah--á--lah'
         self.輕聲位 = [1, 2, 3]
         self.按算結果 = [True, True, True]
-        
 
     def test干焦兩个輕聲詞(self):
         self.漢字 = '先生啦'
         self.臺羅 = '--sian-sinn--lah'
-        self.輕聲位 = [0, 2,]
-        self.按算結果 = [True, True,]
+        self.輕聲位 = [0, 2, ]
+        self.按算結果 = [True, True, ]
 
     def test無輕聲詞(self):
         self.漢字 = '林'
