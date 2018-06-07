@@ -13,7 +13,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
             [字('媽', 'ma'), 字('媽', 'mah', 輕聲標記=True)]
         )
 
-    def test連一个濟字詞A__B_C(self):
+    def test連一个濟字詞A__BC(self):
         參數 = [[字('轉', 'tńg')], [字('來', 'lâi', 輕聲標記=True), ('去', 'khì')]]
         分析器物件 = 輕聲分析器()
         self.assertEqual(
@@ -21,7 +21,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
             [字('轉', 'tńg'), 字('來', 'lâi', 輕聲標記=True), ('去', 'khì')]
         )
 
-    def test莫振動著後壁的一般詞(self):
+    def test莫振動著後壁的一般詞A__BC_E(self):
         參數 = [
             [字('轉', 'tńg')],
             [字('來', 'lâi', 輕聲標記=True), ('去', 'khì')],
@@ -32,7 +32,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
             len(分析器物件.連寫詞間輕聲(參數)), 2
         )
 
-    def test攏一般詞(self):
+    def test攏一般詞A_BC(self):
         參數 = [
             [字('媠', 'suí')]
             [字('姑', 'koo'), ('娘', 'niû')],
@@ -43,7 +43,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
             len(分析器物件.連寫詞間輕聲(參數)), 2
         )
 
-    def test干焦輕聲詞(self):
+    def test干焦輕聲詞__A(self):
         參數 = [[字('喔', 'ooh', 輕聲標記=True)]]
         分析器物件 = 輕聲分析器()
         self.assertEqual(
