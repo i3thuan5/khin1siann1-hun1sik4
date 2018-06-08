@@ -2,6 +2,7 @@ from unittest.case import TestCase
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from 輕聲分析.分析 import 輕聲分析器
 from unittest.mock import patch
+import 輕聲分析
 
 
 class 決定詞內的分連寫單元試驗(TestCase):
@@ -51,28 +52,6 @@ class 決定詞內的分連寫單元試驗(TestCase):
         self.輕聲位 = [1, 3]
         self.按算結果 = [True, True]
 
-    @patch('輕聲分析.輕聲詞清單.輕聲詞清單.讀輕聲詞清單')
-    def test清單愛先對著較長的收詞__來去媠(self, 清單mock):
-        清單mock.return_value = [
-            ['來-去｜lâi-khì'],  # 拆開清單
-            ['來｜lâi']  # 連寫清單
-        ]
-        self.漢字 = '林來去靚'
-        self.臺羅 = 'Lîm--lâi-khì-tsiâng'
-        self.輕聲位 = [1]
-        self.按算結果 = [True]
-
-    @patch('輕聲分析.輕聲詞清單.輕聲詞清單.讀輕聲詞清單')
-    def test清單對著較短的收詞__來靚(self, 清單mock):
-        清單mock.return_value = [
-            ['來-去｜lâi-khì'],  # 拆開清單
-            ['來｜lâi']  # 連寫清單
-        ]
-        self.漢字 = '林來靚'
-        self.臺羅 = 'Lîm--lâi-tsiâng'
-        self.輕聲位 = [1]
-        self.按算結果 = [False]
-    
     # 判斷清單內底無收的詞
     
     def test清單無收就維持連寫林__靚(self):
