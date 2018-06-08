@@ -1,11 +1,11 @@
-from 輕聲分析.輕聲詞清單 import 讀輕聲詞清單
 from 臺灣言語工具.基本物件.詞 import 詞
+from 輕聲分析.輕聲詞清單 import 輕聲詞清單
 
 
 class 輕聲分析器():
 
     def __init__(self):
-        self.清單 = 讀輕聲詞清單()
+        self.清單 = 輕聲詞清單.讀輕聲詞清單()
 
     def 輕聲分析(self, 句物件):
         #
