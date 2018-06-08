@@ -50,3 +50,6 @@ class 輕聲分析器整合試驗(TestCase):
         self.漢字 = '照顧媠媠啦你'
         self.原臺羅 = 'tsiàu-kòo--suí-suí--lah lí'
         self.按算臺羅 = 'tsiàu-kòo--suí-suí --lah lí'
+        
+    def test標點符號(self):
+        self.fail()
