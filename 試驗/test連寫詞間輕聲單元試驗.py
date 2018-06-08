@@ -37,7 +37,10 @@ class 連寫詞間輕聲單元試驗(TestCase):
             [字('來', 'lâi', 輕聲標記=True), 字('去', 'khì')],
             [字('媠', 'suí')]
         ]
-        self.按算結果 = self.參數
+        self.按算結果 = [
+            [字('轉', 'tńg'),字('來', 'lâi', 輕聲標記=True), 字('去', 'khì')],
+            [字('媠', 'suí')]
+        ] 
 
     def test攏一般詞A_BC(self):
         self.參數 = [
@@ -57,7 +60,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
         ]
         self.按算結果 = self.參數
 
-    def test頭前已經有輕聲詞就莫連做伙A__C__C(self):
+    def test頭前已經連寫過矣A__C__C(self):
         self.參數 = [
             [字('姑', 'koo'), 字('娘', 'niû'), 字('仔', 'á', 輕聲標記=True)],
             [字('仔', 'á', 輕聲標記=True)],
