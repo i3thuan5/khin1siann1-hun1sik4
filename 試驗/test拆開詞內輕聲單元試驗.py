@@ -1,4 +1,4 @@
-from unittest.case import TestCase, skip
+from unittest.case import TestCase
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from 臺灣言語工具.基本物件.字 import 字
 from 輕聲分析.分析 import 輕聲分析器

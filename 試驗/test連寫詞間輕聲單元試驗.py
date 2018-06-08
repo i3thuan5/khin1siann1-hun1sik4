@@ -5,7 +5,12 @@ from 臺灣言語工具.基本物件.字 import 字
 
 
 class 連寫詞間輕聲單元試驗(TestCase):
-    def test連一个詞A__B(self):
+    #
+    # A 一般詞 姑娘
+    # B 清單的分寫詞 --喔
+    # C 清單的連寫詞 --仔 
+    #
+    def test連孤字詞A__B(self):
         參數 = [[字('媽', 'ma')], [字('媽', 'mah', 輕聲標記=True)]]
         分析器物件 = 輕聲分析器()
         self.assertEqual(
@@ -13,7 +18,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
             [字('媽', 'ma'), 字('媽', 'mah', 輕聲標記=True)]
         )
 
-    def test連一个濟字詞A__BC(self):
+    def test連濟字詞A__BC(self):
         參數 = [[字('轉', 'tńg')], [字('來', 'lâi', 輕聲標記=True), ('去', 'khì')]]
         分析器物件 = 輕聲分析器()
         self.assertEqual(
@@ -21,7 +26,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
             [字('轉', 'tńg'), 字('來', 'lâi', 輕聲標記=True), ('去', 'khì')]
         )
 
-    def test莫振動著後壁的一般詞A__BC_E(self):
+    def test莫振動著後壁A__BC_E(self):
         參數 = [
             [字('轉', 'tńg')],
             [字('來', 'lâi', 輕聲標記=True), ('去', 'khì')],
@@ -43,8 +48,28 @@ class 連寫詞間輕聲單元試驗(TestCase):
             len(分析器物件.連寫詞間輕聲(參數)), 2
         )
 
-    def test干焦輕聲詞__A(self):
+    def test干焦輕聲詞__B(self):
         參數 = [[字('喔', 'ooh', 輕聲標記=True)]]
+        分析器物件 = 輕聲分析器()
+        self.assertEqual(
+            len(分析器物件.連寫詞間輕聲(參數)), 1
+        )
+    
+    def test莫kah輕聲詞連做伙__B__C(self):
+        參數 = [
+            [字('喔', 'ooh', 輕聲標記=True)],
+            [字('仔', 'á', 輕聲標記=True)],
+        ]
+        分析器物件 = 輕聲分析器()
+        self.assertEqual(
+            len(分析器物件.連寫詞間輕聲(參數)), 1
+        )
+    
+    def test頭前已經有輕聲詞就莫連做伙A__C__C(self):
+        參數 = [
+            [字('姑', 'koo'), ('娘', 'niû'), 字('仔', 'á', 輕聲標記=True)],
+            [字('仔', 'á', 輕聲標記=True)],
+        ]
         分析器物件 = 輕聲分析器()
         self.assertEqual(
             len(分析器物件.連寫詞間輕聲(參數)), 1

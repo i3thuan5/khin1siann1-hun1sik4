@@ -40,3 +40,13 @@ class 輕聲分析器整合試驗(TestCase):
         self.漢字 = '照顧一下啦你'
         self.原臺羅 = 'tsiàu-kòo--tsi̍t-ē--lah lí'
         self.按算臺羅 = 'tsiàu-kòo --tsi̍t-ē --lah lí'
+
+    def test無收的詞維持分寫(self):
+        self.漢字 = '照顧媠媠啦你'
+        self.原臺羅 = 'tsiàu-kòo --suí-suí--lah lí'
+        self.按算臺羅 = 'tsiàu-kòo --suí-suí --lah lí'
+    
+    def test無收的詞維持連寫(self):
+        self.漢字 = '照顧媠媠啦你'
+        self.原臺羅 = 'tsiàu-kòo--suí-suí--lah lí'
+        self.按算臺羅 = 'tsiàu-kòo--suí-suí --lah lí'
