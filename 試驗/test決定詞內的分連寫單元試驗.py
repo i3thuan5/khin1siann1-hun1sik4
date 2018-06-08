@@ -41,3 +41,9 @@ class 決定詞內的分連寫單元試驗(TestCase):
         self.臺羅 = 'Lîm'
         self.輕聲位 = []
         self.按算結果 = []
+
+    def test__一下是__一的衍生詞(self):
+        self.漢字 = '靚一下一下'
+        self.臺羅 = 'tsiâng--tsi̍t-ē--tsi̍t-ē'
+        self.輕聲位 = [1, 3]
+        self.按算結果 = [True, True]
