@@ -8,7 +8,7 @@ class 輕聲詞清單:
     
     @classmethod
     def 讀輕聲詞清單(cls):
-        拆開清單 = []
+        分寫清單 = []
         連寫清單 = []
         清單路徑 = path.join(dirname(dirname(__file__)), '輕聲詞資料', '全部輕聲詞.csv')
         with open(清單路徑) as csvfile:
@@ -28,10 +28,10 @@ class 輕聲詞清單:
                 else:
                     分連不處理 = 一資料['分連不處理']
                     if 分連不處理 == '分寫':
-                        拆開清單.append(分詞)
+                        分寫清單.append(分詞)
                     elif 分連不處理 == '連寫':
                         連寫清單.append(分詞)
         return {
-            '拆開清單': 拆開清單,
+            '分寫清單': 分寫清單,
             '連寫清單': 連寫清單
         }

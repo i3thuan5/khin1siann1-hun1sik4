@@ -8,7 +8,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
     #
     # A 一般詞 姑娘
     # B 清單的分寫詞 --喔
-    # C 清單的連寫詞 --仔 
+    # C 清單的連寫詞 --仔
     #
     def tearDown(self):
         分析器物件 = 輕聲分析器()
@@ -16,17 +16,17 @@ class 連寫詞間輕聲單元試驗(TestCase):
             分析器物件.連寫詞間輕聲(self.參數),
             self.按算結果
         )
-        
+
     def test連孤字詞A__B(self):
         self.參數 = [
-            [字('媽', 'ma')], 
+            [字('媽', 'ma')],
             [字('媽', 'mah', 輕聲標記=True)]
         ]
         self.按算結果 = [[字('媽', 'ma'), 字('媽', 'mah', 輕聲標記=True)]]
 
     def test連濟字詞A__BC(self):
         self.參數 = [
-            [字('轉', 'tńg')], 
+            [字('轉', 'tńg')],
             [字('來', 'lâi', 輕聲標記=True), 字('去', 'khì')]
         ]
         self.按算結果 = [[字('轉', 'tńg'), 字('來', 'lâi', 輕聲標記=True), 字('去', 'khì')]]
@@ -41,7 +41,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
 
     def test攏一般詞A_BC(self):
         self.參數 = [
-            [字('媠', 'suí')]
+            [字('媠', 'suí')],
             [字('姑', 'koo'), 字('娘', 'niû')],
         ]
         self.按算結果 = self.參數
@@ -49,22 +49,21 @@ class 連寫詞間輕聲單元試驗(TestCase):
     def test干焦輕聲詞__B(self):
         self.參數 = [[字('喔', 'ooh', 輕聲標記=True)]]
         self.按算結果 = self.參數
-        
-    
+
     def test莫kah輕聲詞連做伙__B__C(self):
         self.參數 = [
             [字('喔', 'ooh', 輕聲標記=True)],
             [字('仔', 'á', 輕聲標記=True)],
         ]
         self.按算結果 = self.參數
-    
+
     def test頭前已經有輕聲詞就莫連做伙A__C__C(self):
         self.參數 = [
             [字('姑', 'koo'), 字('娘', 'niû'), 字('仔', 'á', 輕聲標記=True)],
             [字('仔', 'á', 輕聲標記=True)],
         ]
         self.按算結果 = self.參數
-    
+
     def test無收的詞維持原本分寫(self):
         # 姑娘--a --tsiang => 不變
         self.參數 = [
