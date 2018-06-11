@@ -5,7 +5,7 @@ from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 
 
 class 輕聲詞清單:
-    
+
     @classmethod
     def 讀輕聲詞清單(cls):
         分寫清單 = []
