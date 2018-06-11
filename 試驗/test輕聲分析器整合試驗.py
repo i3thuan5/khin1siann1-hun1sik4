@@ -52,4 +52,9 @@ class 輕聲分析器整合試驗(TestCase):
         self.按算臺羅 = 'tsiàu-kòo--suí-suí --lah lí'
         
     def test標點符號(self):
-        self.fail()
+        self.漢字 = '林仔啦！'
+        self.原臺羅 = 'Lîm--á --lah!'
+        self.按算臺羅 = 'Lîm--á --lah !'
+        
+        
+        
