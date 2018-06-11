@@ -1,0 +1,18 @@
+sudo: false
+language: python
+python:
+- '3.4'
+- '3.5'
+branches:
+  only:
+  - master
+install:
+- pip install -r requirements.txt
+- pip install flake8
+- pip install coveralls
+script:
+- flake8 試驗 輕聲分析 --exclude=__pycache__ --show-source --count --ignore=E501
+- coverage run -m unittest discover 試驗
+after_success:
+- coverage report
+- coveralls
