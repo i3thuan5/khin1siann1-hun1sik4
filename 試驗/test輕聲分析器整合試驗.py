@@ -4,6 +4,7 @@ from 輕聲分析.分析 import 輕聲分析器
 
 
 class 輕聲分析器整合試驗(TestCase):
+
     def tearDown(self):
         參數 = 拆文分析器.對齊句物件(self.漢字, self.原臺羅)
         按算結果 = 拆文分析器.對齊句物件(self.漢字, self.按算臺羅)
@@ -45,16 +46,13 @@ class 輕聲分析器整合試驗(TestCase):
         self.漢字 = '照顧媠媠啦你'
         self.原臺羅 = 'tsiàu-kòo --suí-suí--lah lí'
         self.按算臺羅 = 'tsiàu-kòo --suí-suí --lah lí'
-    
+
     def test無收的詞維持連寫(self):
         self.漢字 = '照顧媠媠啦你'
         self.原臺羅 = 'tsiàu-kòo--suí-suí--lah lí'
         self.按算臺羅 = 'tsiàu-kòo--suí-suí --lah lí'
-        
+
     def test標點符號(self):
         self.漢字 = '林仔啦！'
         self.原臺羅 = 'Lîm--á --lah!'
         self.按算臺羅 = 'Lîm--á --lah !'
-        
-        
-        

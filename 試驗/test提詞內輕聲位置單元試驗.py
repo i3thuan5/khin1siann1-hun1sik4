@@ -20,4 +20,4 @@ class 提詞內輕聲位置單元試驗(TestCase):
     def test干焦兩个輕聲詞(self):
         self.漢字 = '先生啦'
         self.臺羅 = '--sian-sinn--lah'
-        self.按算結果 = [0, 2,]
+        self.按算結果 = [0, 2, ]

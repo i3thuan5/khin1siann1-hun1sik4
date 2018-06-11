@@ -13,9 +13,9 @@ class 決定詞內的分連寫單元試驗(TestCase):
             分析器物件.決定詞內的分連寫(一詞, self.輕聲位),
             self.按算結果
         )
-    
+
     # 判斷清單內底有收的詞
-    
+
     def test分寫的輕聲詞(self):
         self.漢字 = '林啦'
         self.臺羅 = 'Lîm--lah'
@@ -53,7 +53,7 @@ class 決定詞內的分連寫單元試驗(TestCase):
         self.按算結果 = [True, True]
 
     # 判斷清單內底無收的詞
-    
+
     def test清單無收就維持連寫林__靚(self):
         self.漢字 = '林靚'
         self.臺羅 = 'Lîm--tsiâng'
