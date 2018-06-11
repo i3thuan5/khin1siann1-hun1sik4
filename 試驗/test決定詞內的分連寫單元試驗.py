@@ -1,8 +1,6 @@
 from unittest.case import TestCase
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
 from 輕聲分析.分析 import 輕聲分析器
-from unittest.mock import patch
-import 輕聲分析
 
 
 class 決定詞內的分連寫單元試驗(TestCase):

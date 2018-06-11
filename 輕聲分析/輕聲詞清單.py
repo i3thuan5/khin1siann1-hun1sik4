@@ -2,6 +2,7 @@ from os.path import dirname
 from os import path
 import csv
 from 臺灣言語工具.解析整理.拆文分析器 import 拆文分析器
+from 臺灣言語工具.解析整理.解析錯誤 import 解析錯誤
 
 
 class 輕聲詞清單:
@@ -22,15 +23,14 @@ class 輕聲詞清單:
                         .對齊詞物件(漢字, 本調臺羅)
                         .看分詞()
                     )
-                except:
-                    pass
-    #                 print('讀取輕聲詞清單時對齊失敗！', 漢字, 本調臺羅)
-                else:
-                    分連不處理 = 一資料['分連不處理']
-                    if 分連不處理 == '分寫':
-                        分寫清單.append(分詞)
-                    elif 分連不處理 == '連寫':
-                        連寫清單.append(分詞)
+                except 解析錯誤:
+                    continue
+                
+                分連不處理 = 一資料['分連不處理']
+                if 分連不處理 == '分寫':
+                    分寫清單.append(分詞)
+                elif 分連不處理 == '連寫':
+                    連寫清單.append(分詞)
         return {
             '分寫清單': 分寫清單,
             '連寫清單': 連寫清單
