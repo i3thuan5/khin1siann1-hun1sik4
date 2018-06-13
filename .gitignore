@@ -3,4 +3,7 @@
 *__pycache__
 /venv
 /輕聲詞資料/.~lock.*#
+/build
+/dist
+/khin1siann1_hun1sik4.egg-info
 /.coverage
