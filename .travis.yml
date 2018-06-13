@@ -24,5 +24,5 @@ deploy:
     secure: GAGGX0rd3Vr75OwzjKGSqxX0Kf0zhMb8xycmDVR6Qy/+mqLdhx4xtJCJidl9mxWVamDzXhuutED/STdabyfTwdpvaa58MhfS1B143p0R+M28c9botAjo9pltp8qaT5ivgylInCyH3UW74HjThZB3PD0m+fMg32N/127poBssEhAnuo/Vi8UBjmK1PRpOioN5KDTMzo7vE5D6XP9MkiObsezsBxGylKg7EQN3dMcUrceHRuUrduH1wnbkuWRY0g0jYthcO5E1QWInmuJcUgISgW3uqT11Zq7mY0yDY5GNhQDO2Wn+bfo8FWs0VOAAWAILCdbEEmAXFzn9lOz/dha3zrB2gVuo5wZkl3yIaNGmBxolCAyt8WTVQFHFSpHvur8FGcJ+78qb8B0cHXCm1WMEvAOzaQ1FsRpXikNFVpIrT8FJlQED3YUo0pAetFjM7eAh0QFBCfe2C3Lar4V2ZlCfHehjlE9RVJE6nG0x3S+jS2QLfe1YDKxfdnyZdt3NSS3gWag19EfE3oxxwluPixaMigwTJC+KrRW0fED7En6LEpGMN4CpQ49WoxWSxXjIJVd+YAz1zoOGB0DT7Ay27LEaNaXtDom/uekiuBTcTRpdyIXr+Xc63/gOgL2xkHq2J7TATD1y9my2CYItEcFBfPcA456CjHcv8t5UA0xPhrERFPw=
   on:
     tags: true
-    repo: i3thuan5/khin1siann1_hun1sik4
+    repo: i3thuan5/khin1siann1-hun1sik4
     condition: "$TRAVIS_PYTHON_VERSION == '3.5'"
