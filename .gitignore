@@ -2,5 +2,5 @@
 /.pydevproject
 *__pycache__
 /venv
-*__init__.py
 /輕聲詞資料/.~lock.*#
+/.coverage
