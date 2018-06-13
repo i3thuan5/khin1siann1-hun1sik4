@@ -51,7 +51,7 @@ class 輕聲分析器整合試驗(TestCase):
         self.漢字 = '照顧媠媠啦你'
         self.原臺羅 = 'tsiàu-kòo--suí-suí--lah lí'
         self.按算臺羅 = 'tsiàu-kòo--suí-suí --lah lí'
-    
+
     def test動補的詞維持分寫(self):
         self.漢字 = '照顧起來'
         self.原臺羅 = 'tsiàu-kòo --khí-lâi'
@@ -61,7 +61,7 @@ class 輕聲分析器整合試驗(TestCase):
         self.漢字 = '照顧起來'
         self.原臺羅 = 'tsiàu-kòo--khí-lâi'
         self.按算臺羅 = 'tsiàu-kòo--khí-lâi'
-        
+
     def test標點符號(self):
         self.漢字 = '林仔啦！'
         self.原臺羅 = 'Lîm--á --lah!'

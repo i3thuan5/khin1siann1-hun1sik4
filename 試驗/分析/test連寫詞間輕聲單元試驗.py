@@ -12,7 +12,7 @@ class 連寫詞間輕聲單元試驗(TestCase):
     #
     def setUp(self):
         self.分析器物件 = 輕聲分析器()
-        
+
     def tearDown(self):
         self.assertEqual(
             self.分析器物件.連寫詞間輕聲(self.參數),
