@@ -66,3 +66,8 @@ class 輕聲分析器整合試驗(TestCase):
         self.漢字 = '林仔啦！'
         self.原臺羅 = 'Lîm--á --lah!'
         self.按算臺羅 = 'Lîm--á --lah !'
+
+    def test句頭連寫輕聲詞(self):
+        self.漢字 = '仔'
+        self.原臺羅 = '--á'
+        self.按算臺羅 = '--á'

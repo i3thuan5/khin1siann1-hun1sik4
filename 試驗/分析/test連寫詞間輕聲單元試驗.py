@@ -88,3 +88,16 @@ class 連寫詞間輕聲單元試驗(TestCase):
             [字('靚', 'tsiâng', 輕聲標記=True)],
         ]
         self.按算結果 = self.參數
+
+    def test句頭輕聲詞(self):
+        self.參數 = [
+            [字('仔', 'á', 輕聲標記=True)],
+        ]
+        self.按算結果 = self.參數
+
+    def test句頭輕聲詞莫影響後壁詞(self):
+        self.參數 = [
+            [字('仔', 'á', 輕聲標記=True)],
+            [字('姑', 'koo'), 字('娘', 'niû')],
+        ]
+        self.按算結果 = self.參數
