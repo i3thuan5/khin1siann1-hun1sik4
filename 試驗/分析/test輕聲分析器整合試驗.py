@@ -71,10 +71,8 @@ class 輕聲分析器整合試驗(TestCase):
         self.漢字 = '媽'
         self.原臺羅 = '--mah'
         self.按算臺羅 = '--mah'
-    
+
     def test例外有的無的(self):
         self.漢字 = '有的無的'
         self.原臺羅 = 'ū--ê-bô--ê'
         self.按算臺羅 = 'ū--ê-bô--ê'
-        
-        
