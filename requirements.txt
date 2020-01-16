@@ -1,1 +1,1 @@
-https://github.com/i3thuan5/tai5-uan5_gian5-gi2_kang1-ku7/archive/%E5%AD%97%E7%89%A9%E4%BB%B6m%C3%A0i%E6%AA%A2%E6%9F%A5%E6%A8%99%E9%BB%9E.zip
+tai5-uan5-gian5-gi2-kang1-ku7>=0.6.52
