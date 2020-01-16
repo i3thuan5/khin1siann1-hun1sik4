@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-版本 = '1.0.4'
+版本 = '1.1.0'
 
 setup(
     name='khin1siann1_hun1sik4',

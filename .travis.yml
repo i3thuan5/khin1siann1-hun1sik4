@@ -1,8 +1,7 @@
 sudo: false
 language: python
 python:
-- '3.4'
-- '3.5'
+- '3.7'
 branches:
   only:
   - master
@@ -25,4 +24,4 @@ deploy:
   on:
     tags: true
     repo: i3thuan5/khin1siann1-hun1sik4
-    condition: "$TRAVIS_PYTHON_VERSION == '3.5'"
+
